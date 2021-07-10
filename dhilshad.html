@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Daily Report-Dhilshad</title>
+</head>
+<body class="col-md-6">
+    <div class="container">
+        <div style="text-align:center;  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" >
+            <h2>DAILY SITE REPORTING</h2>
+            <p>Must submit this report daily</p>
+        </div>
+        <div style="margin-left: 20px;">
+          <h1 style="block-size: 27px;">Name : Dhilshad</h1> 
+          <h3 >Department : IT</h3>
+         </div>
+        <div class="row">
+          
+          <div class="column">
+            <form id="submit-form" action="" method="POST">
+                <label for="Date"><b> Date</b></label>
+                <input type="date" id="date" name="Date" placeholder="Enter date" style="border-radius: 3px; border: 1px solid rgb(2, 39, 7); width: 40%; height: 30px;" required><br><br>
+                <label for="textarea"><b> Enter the site</b></label>
+                <input type="text" id="text" name="site" placeholder="Enter the Site" required><br>
+                <div class="row" > 
+                    <div class="column" style="margin-left: -20px; border-radius: 3px; border-radius: 1px solid rgb(2, 39, 7) ;">
+                      <label for="time"><b> Enter the start Time</b> </label>
+                      <input type="time" id="starttime" name="Start time" placeholder="Enter the start time" required>
+                    </div>
+                    <div class="column" style="margin-left: -20px; border-radius: 3px; border-radius: 1px solid rgb(2, 39, 7) ;" >
+                     <span><label for="time" ><b> Enter End Time</b> </label></span> 
+                      <input style="margin-left: 33px;" type="time" id="endtime" name="End time" placeholder="Enter the end time" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    
+                    <div class="column" style="margin-left: -20px; border-radius: 3px; border-radius: 1px solid rgb(2, 39, 7) ;">
+                      <label for="time"><b>Traveling time</b> </label>
+                      <input type="number"  onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" id="time" 
+                      name="Traveling time" style="    margin-left: 38px; width: 100px; height: 27px;" placeholder="Sepecified sites only">
+                    </div>
+                  </div><br>
+                <label for="workdone"><b> Work done</b></label>
+                <textarea id="workdone" name="Work Done" placeholder="Write work done...." style="height:130px" required></textarea>
+                <label for="Remark"><b> Remark</b></label>
+                <textarea id="Remark" name="Remark" placeholder="Write remark...." style="height:130px"></textarea>
+                <input type="submit" value="Submit"/>
+              </form>
+              </div>
+          <div class="column">
+            <img src="image/new daily2.png" style="width:100%">
+          </div>
+        </div>
+      </div>
+      <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbxLzh2-82psLfg8vmLpi1RsY4Hr402nNZpRp1A_4ckRqnhzGbY_TKiy00SHe-8Y2ocwLg/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+</body>
+</html>

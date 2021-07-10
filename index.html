@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Login Page</title>
+       <!--Made with love by Mutiullah Samim -->
+       
+        <!--Bootsrap 4 CDN-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+        <!--Fontawesome CDN-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
+        <!--Custom styles-->
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Sign In</h3>
+                   
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="username" name="userid">
+                            
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="password" name="pswrd">
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="button" onclick="check(this.form)" value="Login" class="btn float-right login_btn">
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Any Quaries please contact Admin 
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script language="javascript">
+        function check(form) { /*function to check userid & password*/
+            /*the following code checkes whether the entered userid and password are matching*/
+            if(form.userid.value == "Dhilshad" && form.pswrd.value == "dhilshad") {
+                window.open('dhilshad.html',"_self")/*opens the target page while Id & password matches*/
+                return false;
+            }
+            
+           else if(form.userid.value == "Jithin" && form.pswrd.value == "jithin") {
+                window.open('jithin.html',"_self")/*opens the target page while Id & password matches*/
+                return ;
+            }
+            else if(form.userid.value == "Majeed" && form.pswrd.value == "majeed") {
+                window.open('majeed.html',"_self")/*opens the target page while Id & password matches*/
+                return ;
+            }
+            else if(form.userid.value == "Rajan" && form.pswrd.value == "rajan") {
+                window.open('rajan.html',"_self")/*opens the target page while Id & password matches*/
+                return ;
+            }
+            else if(form.userid.value == "Masrood" && form.pswrd.value == "masrood") {
+                window.open('masrood.html',"_self")/*opens the target page while Id & password matches*/
+                return ;
+            }
+            else if(form.userid.value == "Salman" && form.pswrd.value == "salman") {
+                window.open('salman.html',"_self")/*opens the target page while Id & password matches*/
+                return ;
+            }
+            else if(form.userid.value == "Jobby" && form.pswrd.value == "jobby") {
+                window.open('jobby.html',"_self")/*opens the target page while Id & password matches*/
+                return ;
+            }
+            else {
+                alert("Error Password or Username")/*displays error message*/
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
